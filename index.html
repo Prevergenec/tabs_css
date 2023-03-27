@@ -1,0 +1,59 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-ru" lang="ru-ru" dir="ltr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Tabs CSS</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.wrapper {
+				width: 1000px;
+				margin: 0 auto;
+			}
+			.tabs-wrapper {
+				display: flex;
+				flex-wrap: wrap;
+				position: relative;
+			}
+			.content {
+				width: 100%;
+				padding: 20px;
+				background-color: #EEE;
+				display: none;
+			}
+			.input {
+				opacity: 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.tab {
+				text-align: center;
+				padding: 20px 0;
+				flex-basis: 50%;
+			}
+			#tab-1:checked ~ .tab-1 {background-color: #EEE;}
+			#tab-1:checked ~ .content-1 {display: block;}
+			#tab-2:checked ~ .tab-2 {background-color: #EEE;}
+			#tab-2:checked ~ .content-2 {display: block;}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="tabs-wrapper">
+				<input class="input" type="radio" name="tabs" id="tab-1" />
+				<input class="input" type="radio" name="tabs" id="tab-2" />
+				<label class="tab tab-1" for="tab-1" name="tab-1">Tab 1</label>
+				<label class="tab tab-2" for="tab-2" name="tab-2">Tab 2</label>
+				<div class="content content-1">Content 1</div>
+				<div class="content content-2">Content 2</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
